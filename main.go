@@ -2,6 +2,7 @@ package main
 
 import (
 	"bibFileCheck/checkFile"
+	"fmt"
 	"os"
 )
 
@@ -19,4 +20,9 @@ func main() {
 	}(file)
 
 	checkFile.CheckFile(file)
+
+	_, err = fmt.Scanln()
+	if err != nil {
+		return
+	}
 }
